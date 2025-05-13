@@ -1,0 +1,7 @@
+{
+    "manifest_version":3,
+    "name":"AI Summary For Articles",
+    "version":0.1,
+    "permissions":["scripting","storage","activeTab"]
+
+}
