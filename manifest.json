@@ -1,7 +1,28 @@
 {
     "manifest_version":3,
     "name":"AI Summary For Articles",
-    "version":0.1,
-    "permissions":["scripting","storage","activeTab"]
+    "version":"0.1",
+    
+    "permissions":["scripting","storage","activeTab"],
+
+    "action":{
+      "default_popup": "popup.html",
+      "default.icon":"icon.pngn"
+    },
+
+    "content_scripts":[
+        {
+            "matches": ["<all_urls>"],
+            "js":["content.js"]
+        }
+    ],
+
+    "background":{
+        "service_worker":"background.js"
+    },
+
+    "options_page":"options.html",
+
+    "host_permissions":["<all_urls >"]
 
 }
